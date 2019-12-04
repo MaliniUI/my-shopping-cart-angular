@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1, 
+    "title": "carrot",
+    "cost":20, 
+    "imgUrl":"https://freepngimg.com/thumb/carrot/1-2-carrot-picture.png",
+    "description": "Fresh from farm",
+    "rating": 3,
+    "category": "vegetable",
+    "currency": "INR"
+  },
+  {
+    "id": 2, 
+    "title": "Beans",
+    "cost":23, 
+    "imgUrl":"https://www.pngarts.com/files/5/Green-Beans-PNG-High-Quality-Image.png",
+    "description": "High Quality beans",
+    "rating": 4,
+    "category": "vegetable",
+    "currency": "INR"
+  },
+  {
+    "id": 3, 
+    "title": "Onion",
+    "cost":70.45, 
+    "imgUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIPzJqRDU_1mtyZJWGL9WcG02vQiJUp6pl0KmqjjMOzl7P8bOp&s",
+    "description": "Always on our first list",
+    "rating": 5,
+    "category": "vegetable",
+    "currency": "INR"
+  },
+  {
+    "id": 4, 
+    "title": "Tomato",
+    "cost":30, 
+    "imgUrl":"https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Vegetables-PNG/Tomato_PNG_Clipart_Picture.png?m=1434276660",
+    "description": "Always on our first list",
+    "rating": 5,
+    "category": "vegetable",
+    "currency": "INR"
+  },
+  {
+    "id": 5, 
+    "title": "Orange",
+    "cost":70.45, 
+    "imgUrl":"https://img.freepik.com/free-vector/hand-drawn-colorful-orange-illustration_53876-2977.jpg?size=626&ext=jpg",
+    "description": "Always on our first list",
+    "rating": 5,
+    "category": "fruit",
+    "currency": "INR"
+  },
+  {
+    "id": 6, 
+    "title": "Apple",
+    "cost":150, 
+    "imgUrl":"https://github.com/MaliniUI/assets/blob/master/apple.png",
+    "description": "Always on our first list",
+    "rating": 4.5,
+    "category": "fruit",
+    "currency": "INR"
+  }
+]

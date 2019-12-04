@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="row">
+    <div class="header-wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="dib label-wrapper" routerLink="/" (onclick)="makeItActive(1)">
+        <label>Happy Shopping</label>
+        </div>
+        <div class="dib">
+          <i class="fa fa-shopping-cart my-cart-icon"></i>
+        <span class="count-label" routerLink="/cart" (onclick)="makeItActive(2)" >{{cartCount}}</span>
+        </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
