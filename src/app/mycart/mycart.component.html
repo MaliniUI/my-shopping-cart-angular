@@ -1,3 +1,25 @@
-<p>
-mycart works!
-</p>
+<h2>Cart Items</h2>
+<div *ngIf="cartItemList.length <= 0">
+  Your Cart is Empty
+</div>
+<div class="row" *ngIf="cartItemList.length > 0">
+  <div class="cart-item-wrapper">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Actual Cost</th>
+        <th>Total Cost</th>
+      </thead>
+     
+        <tr *ngFor="let item of cartItemList; let i = index;">
+          <td>{{i+1}}</td>
+          <td>{{item.title}}</td>
+          <td>{{item.quantity}}</td>
+          <td>{{item.cost}}</td>
+          <td>{{item.cost * item.quantity}}</td>
+        </tr>
+    </table>
+  </div>
+</div>

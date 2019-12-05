@@ -7,7 +7,8 @@
     "description": "Fresh from farm",
     "rating": 3,
     "category": "vegetable",
-    "currency": "INR"
+    "currency": "INR",
+    "quantity" : 1
   },
   {
     "id": 2, 
@@ -17,7 +18,8 @@
     "description": "High Quality beans",
     "rating": 4,
     "category": "vegetable",
-    "currency": "INR"
+    "currency": "INR",
+    "quantity" : 1
   },
   {
     "id": 3, 
@@ -27,7 +29,8 @@
     "description": "Always on our first list",
     "rating": 5,
     "category": "vegetable",
-    "currency": "INR"
+    "currency": "INR",
+    "quantity" : 1
   },
   {
     "id": 4, 
@@ -37,7 +40,8 @@
     "description": "Always on our first list",
     "rating": 5,
     "category": "vegetable",
-    "currency": "INR"
+    "currency": "INR",
+    "quantity" : 1
   },
   {
     "id": 5, 
@@ -47,7 +51,8 @@
     "description": "Always on our first list",
     "rating": 5,
     "category": "fruit",
-    "currency": "INR"
+    "currency": "INR",
+    "quantity" : 1
   },
   {
     "id": 6, 
@@ -57,6 +62,7 @@
     "description": "Always on our first list",
     "rating": 4.5,
     "category": "fruit",
-    "currency": "INR"
+    "currency": "INR",
+    "quantity" : 1
   }
 ]
