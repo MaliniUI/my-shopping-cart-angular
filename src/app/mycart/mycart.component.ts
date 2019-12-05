@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.services';
+import Iitems from '../itemdisplay/items';
 
 @Component({
   selector: 'app-mycart',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MycartComponent implements OnInit {
 
-  constructor() { }
+  cartItemList: Iitems[] = [];
+
+  constructor(private cartItems: SharedService) { }
 
   ngOnInit() {
+    this.cartItems.cartItems.subscribe(item => this.cartItemList = item);
+    debugger;
   }
+
 
 }
