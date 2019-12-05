@@ -10,10 +10,12 @@ import { MycartComponent } from './mycart/mycart.component';
 import {AppRoute} from './app.router';
 import {RouterModule} from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
+import { SharedService } from './shared.services';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule , RouterModule.forRoot(AppRoute)],
   declarations: [ AppComponent, HelloComponent, HeaderComponent, ItemdisplayComponent, MycartComponent, LandingComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ SharedService ]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import Iitems from '../itemdisplay/items';
-import {HeaderComponent} from '../header/header.component';
+import { SharedService } from '../shared.services';
 
 @Component({
   selector: 'app-landing',
@@ -9,21 +9,23 @@ import {HeaderComponent} from '../header/header.component';
 })
 export class LandingComponent implements OnInit {
 
-  @Input()
   updateCartCount: number = 0;
 
    toBeInserted: Iitems[] = [];
 
-  constructor() { }
+  constructor(private countUpdate: SharedService, private cartItemUpdated: SharedService) { }
 
   ngOnInit() {
+    this.countUpdate.currentCount.subscribe(count => this.updateCartCount = count);
+    this.cartItemUpdated.currentCartItems.subscribe(item => this.toBeInserted = item);
   }
 
 itemToBeAddedToCart(data: any[]): void{
     debugger;
       this.toBeInserted.push(data);
-      HeaderComponent.cartCount = this.toBeInserted.length;
       this.updateCartCount = this.toBeInserted.length;
+       this.countUpdate.changeCount(this.updateCartCount);
+       this.cartItemUpdated.updateCartItems(this.toBeInserted);
       console.log("cart items ==> "+this.toBeInserted);
     }
 

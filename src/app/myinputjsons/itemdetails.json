@@ -53,7 +53,7 @@
     "id": 6, 
     "title": "Apple",
     "cost":150, 
-    "imgUrl":"https://github.com/MaliniUI/assets/blob/master/apple.png",
+    "imgUrl":"https://cdn.jsdelivr.net/gh/MaliniUI/my-shopping-cart-angular@master/src/app/assets/apple.png",
     "description": "Always on our first list",
     "rating": 4.5,
     "category": "fruit",
