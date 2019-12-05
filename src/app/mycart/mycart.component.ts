@@ -10,12 +10,19 @@ import Iitems from '../itemdisplay/items';
 export class MycartComponent implements OnInit {
 
   cartItemList: Iitems[] = [];
+  totalAmount : number = 0;
 
   constructor(private cartItems: SharedService) { }
 
   ngOnInit() {
     this.cartItems.cartItems.subscribe(item => this.cartItemList = item);
-    debugger;
+
+     debugger;
+    for(let item of this.cartItemList){ 
+      this.totalAmount += (parseInt(item.quantity) * parseInt(item.cost)) ;
+    }
+    console.log("Total ==> "+ this.totalAmount);
+   
   }
 
 
