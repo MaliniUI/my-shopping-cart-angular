@@ -9,6 +9,9 @@
 .label-wrapper{
   width: 90%;
 }
+.label-wrapper label{
+  cursor: pointer;
+}
 
 .my-cart-icon{
   font-size:25px;
@@ -22,5 +25,6 @@
   border-radius: 50%;
   background-color: #6D8887;
   color: white;
+  cursor: pointer;
 
 }

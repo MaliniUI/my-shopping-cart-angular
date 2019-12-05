@@ -1,6 +1,9 @@
 <h2>Cart Items</h2>
 <div *ngIf="cartItemList.length <= 0">
-  Your Cart is Empty
+  <i>Your Cart is Empty</i>
+  <div>
+    <button class="return-shop" routerLink="/" (onclick)="makeItActive(1)"> Return Shopping</button>
+  </div>
 </div>
 <div class="row" *ngIf="cartItemList.length > 0">
   <div class="cart-item-wrapper">
