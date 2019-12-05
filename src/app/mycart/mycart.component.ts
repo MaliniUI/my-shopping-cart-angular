@@ -18,7 +18,7 @@ export class MycartComponent implements OnInit {
     this.cartItems.cartItems.subscribe(item => this.cartItemList = item);
 
      debugger;
-    for(let item of this.cartItemList){ 
+    for(let item in this.cartItemList){ 
       this.totalAmount += (parseInt(item.quantity) * parseInt(item.cost)) ;
     }
     console.log("Total ==> "+ this.totalAmount);
