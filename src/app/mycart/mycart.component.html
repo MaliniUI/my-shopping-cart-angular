@@ -19,7 +19,19 @@
         <tr *ngFor="let item of cartItemList; let i = index;">
           <td>{{i+1}}</td>
           <td>{{item.title}}</td>
-          <td>{{item.quantity}}</td>
+          <td><div class="input-group">
+                <span class="input-group-btn">
+              <button type="button" id="dec-{{item.quantity}}" class="btn btn-default btn-number" disabled="disabled" data-type="minus" (onclick)="decreaseItemQuantity($event, item.id)">
+                  <span class="fa fa-minus"></span>
+                </button>
+                </span>
+                <input id={{item.quantity}} type="text" class="form-control input-quantity" [(ngModel)]="item.quantity" min="1" max="10" (ngModelChange)="updateItemQuantity($event, item.id)" >
+                <span class="input-group-btn">
+              <button type="button" id="inc-{{item.quantity}}" class="btn btn-default btn-number" data-type="plus" (onclick)="increaseItemQuantity($event, item.id)">
+                  <span class="fa fa-plus"></span>
+                </button>
+                </span>
+            </div></td>
           <td>{{item.cost}}</td>
           <td>{{item.cost * item.quantity}}</td>
         </tr>
