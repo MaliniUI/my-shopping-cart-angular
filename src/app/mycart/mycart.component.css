@@ -15,3 +15,7 @@ table tr {
 .total-title{
 text-align: right;
 }
+
+.input-quantity{
+       width: 30px;
+       }
