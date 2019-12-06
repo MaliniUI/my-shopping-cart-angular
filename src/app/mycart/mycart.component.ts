@@ -66,6 +66,18 @@ export class MycartComponent implements OnInit {
 
   increaseItemQuantity(id){
     debugger;
+    for(let r of this.cartItemList){
+      if(r.id == id){
+        if(r.quantity < 10){
+          this.curCount++;
+          r.quantity = parseInt(r.quantity) + 1;
+          this.countChanged = this.currentCount.countSource.value + 1;
+          this.currentCount.changeCount(this.countChanged);
+          this.totalAmount += (r.cost);
+          break;
+        }
+      }
+    }
   }
 
 }

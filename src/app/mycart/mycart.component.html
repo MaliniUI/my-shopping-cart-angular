@@ -7,12 +7,13 @@
 </div>
 <div class="row" *ngIf="cartItemList.length > 0">
   <div class="cart-item-wrapper">
-    <table class="cart-table">
+    <table class="cart-table" border="0">
       <thead>
         <th>ID</th>
         <th></th>
         <th>Title</th>
         <th>Quantity</th>
+        <th></th>
         <th>Actual Cost</th>
         <th>Total Cost</th>
       </thead>
@@ -34,12 +35,13 @@
                 </button>
                 </span>
             </div></td>
-          <td>{{item.cost}}</td>
-          <td>{{item.cost * item.quantity}}</td>
+          <td><i class="fa fa-trash cart-delete"></i></td>
+          <td>{{item.cost | number : '1.2-2'}}</td>
+          <td>{{item.cost * item.quantity | number : '1.2-2'}}</td>
         </tr>
         <tr>
           <td colspan="5" class="total-title"> Total: </td>
-          <td class="grand-total"> {{totalAmount}} </td>
+          <td class="grand-total"> {{totalAmount | number : '1.2-2'}} </td>
         </tr>
     </table>
   </div>

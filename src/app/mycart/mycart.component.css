@@ -17,6 +17,10 @@
   padding:15px;
 }
 
+.cart-table thead{
+  background-color: burlywood;
+}
+
 
 .total-title{
 text-align: right;
@@ -24,6 +28,7 @@ text-align: right;
 
 .input-quantity{
        width: 30px;
+       text-align:center;
        }
 
 .cart-table{
@@ -34,4 +39,9 @@ text-align: right;
 .item-icon{
   width:30px;
   height: 30px;
+}
+
+.cart-delete{
+  color: #ff0000;
+  font-size: 20px;
 }
