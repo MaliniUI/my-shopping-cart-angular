@@ -16,7 +16,6 @@ export class SharedService{
   }
 
   updateCartItems(newItem: Iitems[]){
-    debugger;
     this.cartItems.next(newItem);
   }
 }
