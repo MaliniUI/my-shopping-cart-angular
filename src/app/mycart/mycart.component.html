@@ -7,9 +7,10 @@
 </div>
 <div class="row" *ngIf="cartItemList.length > 0">
   <div class="cart-item-wrapper">
-    <table>
+    <table class="cart-table">
       <thead>
         <th>ID</th>
+        <th></th>
         <th>Title</th>
         <th>Quantity</th>
         <th>Actual Cost</th>
@@ -18,16 +19,17 @@
      
         <tr *ngFor="let item of cartItemList; let i = index;">
           <td>{{i+1}}</td>
+          <td><img class="item-icon" src='{{item.imgUrl}}' /></td>
           <td>{{item.title}}</td>
           <td><div class="input-group">
                 <span class="input-group-btn">
-              <button type="button" id="dec-{{item.quantity}}" class="btn btn-default btn-number" disabled="disabled" data-type="minus" (onclick)="decreaseItemQuantity($event, item.id)">
+              <button id="dec-{{item.quantity}}" class="btn btn-default btn-number" (click)="decreaseItemQuantity(item.id)" >
                   <span class="fa fa-minus"></span>
                 </button>
                 </span>
                 <input id={{item.quantity}} type="text" class="form-control input-quantity" [(ngModel)]="item.quantity" min="1" max="10" (ngModelChange)="updateItemQuantity($event, item.id)" >
                 <span class="input-group-btn">
-              <button type="button" id="inc-{{item.quantity}}" class="btn btn-default btn-number" data-type="plus" (onclick)="increaseItemQuantity($event, item.id)">
+              <button id="inc-{{item.quantity}}" class="btn btn-default btn-number" (click)="increaseItemQuantity(item.id)">
                   <span class="fa fa-plus"></span>
                 </button>
                 </span>
@@ -36,7 +38,7 @@
           <td>{{item.cost * item.quantity}}</td>
         </tr>
         <tr>
-          <td colspan="4" class="total-title"> Total: </td>
+          <td colspan="5" class="total-title"> Total: </td>
           <td class="grand-total"> {{totalAmount}} </td>
         </tr>
     </table>

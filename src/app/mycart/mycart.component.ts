@@ -14,12 +14,14 @@ export class MycartComponent implements OnInit {
   updatedItem: number = 0;
   curCount: number =0;
   countChanged: number = 0;
+  removeId: number = -1;
 
-  constructor(private cartItems: SharedService, private currentCount: SharedService) { }
+  constructor(private cartItems: SharedService, private currentCount: SharedService, private removeItemFromCart: SharedService) { }
 
   ngOnInit() {
     this.cartItems.cartItems.subscribe(item => this.cartItemList = item);
     this.currentCount.currentCount.subscribe(item => this.curCount = item);
+    this.removeItemFromCart.removeItem.subscribe(item => this.removeId = item);
 
      debugger;
     for(let item of this.cartItemList){ 
@@ -40,14 +42,30 @@ export class MycartComponent implements OnInit {
     this.currentCount.changeCount(this.countChanged);
   }
 
-  decreaseItemQuantity(obj){
+  decreaseItemQuantity(id){
     debugger;
-
+    for(let r of this.cartItemList){
+      if(r.id == id){
+        if(r.quantity > 1){
+          this.curCount--;
+          r.quantity = parseInt(r.quantity) - 1;
+          this.countChanged = this.currentCount.countSource.value - 1;
+          this.currentCount.changeCount(this.countChanged);
+          this.totalAmount -= (r.cost);
+          break;
+        }else if(r.quantity == 1){
+          this.curCount--;
+          this.removeItemFromCart.removeCartItem(id);
+          this.countChanged = this.currentCount.countSource.value - 1;
+          this.currentCount.changeCount(this.countChanged);
+          this.totalAmount -= (r.cost);
+        }
+      }
+    }
   }
 
-  increaseItemQuantity(obj){
+  increaseItemQuantity(id){
     debugger;
   }
-
 
 }

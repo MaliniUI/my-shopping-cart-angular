@@ -7,10 +7,16 @@
 }
 
 
-table tr {
+.cart-table tr {
+  height: 70px;
    padding:20px;
+   margin:20px;
     
 }
+.cart-table th{
+  padding:15px;
+}
+
 
 .total-title{
 text-align: right;
@@ -19,3 +25,13 @@ text-align: right;
 .input-quantity{
        width: 30px;
        }
+
+.cart-table{
+  width: 100%;
+    text-align: center;
+}
+
+.item-icon{
+  width:30px;
+  height: 30px;
+}
