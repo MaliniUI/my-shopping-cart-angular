@@ -6,6 +6,21 @@
     border-color: #39b939;
 }
 
+.cart-table{
+  border-spacing: 0;
+}
+
+.cart-table tr:nth-child(even){
+  background-color:#d5f6f0;
+}
+
+.cart-table tr:nth-child(odd){
+  background-color: #aaf2da;
+}
+
+.cart-table tr:last-child{
+  background-color: #5e9a7970;
+}
 
 .cart-table tr {
   height: 70px;
@@ -18,7 +33,8 @@
 }
 
 .cart-table thead{
-  background-color: burlywood;
+  background-color: #5f9a5e;
+  color: #ffffff;
 }
 
 

@@ -80,4 +80,17 @@ export class MycartComponent implements OnInit {
     }
   }
 
+  deleteItem(id){
+    for(let r of this.cartItemList){
+      if(r.id == id){
+          debugger;
+          this.countChanged = this.currentCount.countSource.value - parseInt(r.quantity);
+          this.currentCount.changeCount(this.countChanged);
+          this.totalAmount -= (r.cost*r.quantity);
+          r.quantity = 1;
+          this.removeItemFromCart.removeCartItem(id);
+      }
+    }
+  }
+
 }

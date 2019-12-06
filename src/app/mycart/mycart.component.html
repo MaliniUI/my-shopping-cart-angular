@@ -35,12 +35,12 @@
                 </button>
                 </span>
             </div></td>
-          <td><i class="fa fa-trash cart-delete"></i></td>
+          <td><i class="fa fa-trash cart-delete" (click)="deleteItem(item.id)"></i></td>
           <td>{{item.cost | number : '1.2-2'}}</td>
           <td>{{item.cost * item.quantity | number : '1.2-2'}}</td>
         </tr>
         <tr>
-          <td colspan="5" class="total-title"> Total: </td>
+          <td colspan="6" class="total-title"> Total: </td>
           <td class="grand-total"> {{totalAmount | number : '1.2-2'}} </td>
         </tr>
     </table>
