@@ -15,6 +15,9 @@
 
 .my-cart-icon{
   font-size:25px;
+  position: absolute;
+    top: 15px;
+    right: 35px;
 }
 
 .count-label{
@@ -23,7 +26,7 @@
   right: 15px;
   padding: 1px 7px;
   border-radius: 50%;
-  background-color: #6D8887;
+  background-color: #58d539;
   color: white;
   cursor: pointer;
 
