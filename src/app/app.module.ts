@@ -11,10 +11,11 @@ import {AppRoute} from './app.router';
 import {RouterModule} from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { SharedService } from './shared.services';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule , RouterModule.forRoot(AppRoute)],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, ItemdisplayComponent, MycartComponent, LandingComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, ItemdisplayComponent, MycartComponent, LandingComponent, DetailsComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ SharedService ]
 })
