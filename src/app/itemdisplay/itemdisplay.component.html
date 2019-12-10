@@ -2,10 +2,12 @@
 	<div class="single-item-wrapper">
 		<div class="single-item" *ngFor="let items of myItems">
 			<div class="item-content-wrapper">
+        <div class="detail-click-wrapper" routerLink="/details/{{items.title}}" (onclick)="makeItActive(3)">
 				<div class="item-img-wrapper">
 					<img class="item-img" src='{{items.imgUrl}}' />
         </div>
 				<div class="item-title">{{items.title}}</div>
+        </div>
 				<div class="rating-cost">
 					<span class="item-rating">Rating: {{items.rating}}</span>
 					<span><i class="item-cost">{{items.currency}} {{items.cost}}</i></span>

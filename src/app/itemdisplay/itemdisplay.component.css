@@ -3,7 +3,9 @@
   flex-flow: row wrap;
   justify-content: center;
 }
-
+.detail-click-wrapper{
+  cursor: pointer;
+}
 .single-item{
   width: 200px;
   height:250px;
